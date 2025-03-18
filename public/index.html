@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDN</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body class="c2">
+    <h1 class="c3">CDN</h1>
+    <div class="container">
+        <div >
+            <h2 class="c4">Subir</h2>
+            <form id="uploadForm">
+                <label for="imageInput" class="c6">Selecciona una imagen:</label>
+                <input type="file" id="imageInput" name="image" accept="image/*" required title="Select an image to upload">
+                <button id="uploadButton" title="Upload the selected image">Subir</button>
+            </form>
+        </div>
+        <div>
+            <h2 class="c5">Imagenes</h2>
+            <ul id="imageList" class="image-list"></ul>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modalImage" src="" alt="Image" width="250">
+            <div>
+                <button id="variant250" onclick="changeVariant(currentImageId, 250)" class="c7">250 px</button>
+                <button id="variant500" onclick="changeVariant(currentImageId, 500)" class="c7">500 px</button>
+                <button id="variant750" onclick="changeVariant(currentImageId, 750)" class="c7">750 px</button>
+                <button id="deleteButton" onclick="deleteImage(currentImageId)" class="c7">Borrar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
